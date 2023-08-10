@@ -1,0 +1,512 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* ------------------> BODY <------------------ */
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: #ebebeb;
+    margin: 0;
+}
+
+/* ------------------> HEADER <------------------ */
+
+header{
+    background-color: #EAC926;
+}
+
+/* LOGO  */
+
+.logoYLupa{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoDireccion{
+    width: 50%;
+    padding: 10px;}
+
+
+/* BANNER */
+
+.imagenBanner{
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+/* BARRA BUSCADOR  */
+
+.barraBuscador{
+    width: 100%;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    color: #666;
+    padding-left: 5px;
+}
+
+.formBuscador{
+    background-color: white;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.lupa{
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.lupa i{
+    margin: 7px;
+    font-size: 20px;
+    color: black;
+}
+
+/* ----------> NAVEGADOR <---------- */
+
+/* NAVEGADOR NORMAL*/
+
+nav{
+    display: none;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    
+}
+
+.textoTarjetaDeCredito{
+    margin: 15px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.textoTarjetaDeCredito p{
+    display: inline;
+}
+
+.textoTarjetaDeCredito i{
+    display: inline;
+    font-size: 25px;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: black;
+}
+
+nav ul{
+    list-style: none;
+}
+
+/* MENÚ BURGUER */
+
+.burger-menu{
+    margin: 25px;
+    text-align: center;
+    padding: 10px auto; 
+}
+
+.burger-menu i{
+    border-radius: 10px;
+    background-color: #1259c3;
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+}
+
+
+/* ------------------> MAIN <------------------*/
+
+main{
+    background-color: white;
+    margin: 50px auto;
+    width: 90%;
+    margin: auto;
+}
+
+h1{
+    font-size: 24px;
+}
+
+h2{
+    font-size: 18px;
+}
+
+
+/* SECCION  */
+
+section{
+    background-color: #ebebeb;
+}
+
+section h1{
+    margin: 10px 0px;
+    padding: 15px 0px;
+    color: #666;
+    font-size: 18px;
+    margin-left: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+section p{
+font-size: 16px;
+margin: 2px;
+margin-right: 6px;
+}
+
+/* ARTICULOS */
+
+article{
+    margin: 10px 0px;
+    padding: 15px;
+    padding-bottom: 0px;
+    background-color: white;
+}
+
+article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.cajaArticuloSection{
+    display: flex;
+}
+
+.itemsArticulos:hover > h2{
+    display: block;
+    transition: all 0.2s;
+}
+
+article h2{
+    display: none;
+    margin-top: 15px;
+}
+
+section article img{
+    width: 100%;
+    
+}
+
+.itemsArticulos{
+    display: flex;
+    flex-direction: column;
+    border-top: #ebebeb solid 1px;
+    padding: 15px;
+}
+
+.itemsArticulos i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 35px;
+    margin-top: -30px;
+}
+
+.itemsArticulos i:hover{
+    transform: rotate(-90deg);
+    transition: 1.2s;
+}
+
+
+.itemsArticulos i, .porcentajeDescuento{
+    color: #39b54a;
+}
+
+/* ------------------> FOOTER <------------------ */
+
+footer{
+    margin-top: 25px;
+    background-color: white;
+}
+
+.footerIconos{
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.footerIconos b{
+    color: black;
+}
+
+.footerIconos i{
+    color: #1259c3;
+    font-size: 125px;
+    margin: 60px  0px;
+}
+
+.footerClass h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footerClass p{
+    font-size: 1rem;
+}
+
+footer h4{
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    margin-left: 10px;
+}
+
+/* ------------------> FORMULARIO REGISTRO <------------------ */
+
+.formularioRegistro, .formularioLogin{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.formularioRegistro input, .formularioLogin input{
+    margin-top: 5px;
+    height: 40px;
+}
+
+.pRegistro{
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#categoriasRegistro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#categoriasRegistro label{
+    display: block;
+}
+
+#categoriasRegistro span{
+    display: flex;
+    align-items: center;
+}
+
+.pRegistro button{
+    margin: 10px 0px;
+    background-color: #1259c3;
+    color: #FFF;
+    width: 80%;
+    padding: 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submit:hover{
+    background-color: #0022AA;
+}
+/* ------------------> FORMULARIO LOGIN <------------------ */
+
+/* ------------------> RESPONSIVE <------------------ */
+
+@media (min-width: 361px){
+    
+    header nav{
+        text-transform: uppercase;
+    }
+    
+    .lupa{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .logoLupaCuotas{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    .logoImg{
+        margin: 10px 5px;
+    }
+
+    .logoYLupa{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 70%;
+    }
+
+    .textoTarjetaDeCredito{
+        width: 30%;
+        display: flex;
+        font-size: 12px;
+    }
+    
+    nav li{
+        margin: 0px 10px;
+    }
+    
+    nav{
+        margin: 10px 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+    }
+    
+    /* NAVEGADOR SIN ICONOS  */
+    
+    .navegadorML{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin: 20px 0px;
+    }
+    
+    /* NAVEGADOR CON ICONOS  */
+    
+    .navegadorIconos{
+        display: flex;
+    }
+
+    /* TXT CUOTAS SIN INTERES  */
+
+    .textoTarjetaDeCredito{
+        margin: 15px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* BURGUER MENU  */
+
+    .burger-menu{
+        display: none;
+    }
+
+    /* SECTION  */
+
+    section h1{
+        margin: 0px 50px;
+    }
+
+    .cajaSectionArticle{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* ARTICLE  */
+    
+    article{
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    article h2{
+        display: block;
+    }
+
+    /* CAMION VERDE  */
+
+}
+.itemsArticulos i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 100%;
+    margin-top: -30px;
+}
+
+/* ----------> DESCKTOP <---------- */
+
+@media (min-width: 769px){
+
+    nav{
+        font-size: 1rem;
+    }
+
+    .logoLupaCuotas {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .textoTarjetaDeCredito{
+        font-size: 1rem;
+    }
+    
+    main{
+        background-color: #ebebeb;
+    }
+
+    section h1{
+        margin-left: 10px;
+    }
+
+    .cajaSectionArticle {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }   
+    
+    section h1{
+        font-size: 2rem;
+        margin: 15px;
+    }
+
+    article{
+        margin: 0px 10px;
+    }
+    
+    article h2{
+        display: block;
+    }
+
+    .cajaArticuloSection p, .article h2{
+        font-size: 20px;
+    }
+
+    .footerIconos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;     
+    }
+
+    .footerClass{
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    .footerIconos i{
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .footerIconos i:hover{
+        color: #0022AA;
+    }
+
+    /* REGISTRO / LOGIN */
+
+    form button{
+        font-size: 25px;
+    }
+}
