@@ -1,23 +1,42 @@
-
 // ==========> requerimos los modulos para trabajar
 const path = require("path");
 const express = require("express");
 const app = express();
 const validarRegister = false;
 
-// ==========> creamos la ruta a los archivos estaticos 
+const homeRoute = require('./src/routes/home');
+
+
+//EJS
+
+app.set('view engine', 'ejs');
+
+app.set('views', __dirname + './src/views');
+
+//HOME
+
+// app.get("/",(req,res)=>{
+    //     res.render(path.resolve(__dirname, './src/views/home'))
+// })
+
+//JSON
+
 app.use(express.json());
+
+// ==========> creamos la ruta a los archivos estaticos 
+
 app.use ('/', express.static(__dirname + '/public'))
 
-app.get("/",(req,res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/home.html"))
-})
+app.use('/', homeRoute);
+
+
+
+
 
 // FORMULARIO LOGIN 
 
 app.get("/login", (req,res) => {
-    let htmlPath = path.resolve(__dirname, "./views/login.html");
-    res.sendFile(htmlPath)
+    res.render(path.resolve(__dirname, './src/views/login'));
 })
 
 app.post("/login", (req, res) => {
@@ -27,8 +46,7 @@ app.post("/login", (req, res) => {
 // FORMULARIO REGISTER
 
 app.get("/register", (req,res) => {
-    let htmlPath = path.resolve(__dirname, "./views/register.html");
-    res.sendFile(htmlPath)
+    res.render(path.resolve(__dirname, './src/views/register'));
 })
 
 
