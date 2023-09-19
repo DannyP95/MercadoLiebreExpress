@@ -13,12 +13,6 @@ app.set('view engine', 'ejs');
 
 app.set('views', __dirname + './src/views');
 
-//HOME
-
-// app.get("/",(req,res)=>{
-    //     res.render(path.resolve(__dirname, './src/views/home'))
-// })
-
 //JSON
 
 app.use(express.json());

@@ -225,14 +225,18 @@ section article img{
 /* ------------------> FOOTER <------------------ */
 
 footer{
-    margin-top: 25px;
     background-color: white;
 }
 
 .footerIconos{
+    margin: 20px 0px;
     text-align: center;
     color: #666;
-    margin-bottom: 50px;
+}
+
+.footerClass{
+    margin: 15px;
+    padding: 15px 0px;
 }
 
 .footerIconos b{
@@ -485,6 +489,7 @@ footer h4{
     }
 
     .footerIconos{
+        padding-top: 30px;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;     
