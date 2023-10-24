@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
-const mainController = require('../controller/mainController.js')
 const route = express.Router();
+
+const mainController = require('../controller/mainController.js')
 
 route.get('/', mainController.home)
 
@@ -9,7 +10,7 @@ route.get('/login', mainController.login)
 
 route.get('/register', mainController.register)
 
-route.get('/db', mainController.data)
+
 
 
 module.exports = route  

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
    
-    <%- include ('./partials/head') %>  
+<head>
+    <%- include ('./partials/head') %>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 
 <body>
     <%- include ('./partials/header') %>  
@@ -25,7 +28,7 @@
                                 <p class="porcentajeDescuento"> <%= products.discount %> </p>
                             </div>
                             <h2> <%= products.name %>  </h2>
-                            <a href="/products/<%= products.id %>"></a>
+                            <a href="/products/<%= products.id %>"> Ver más </a>
                         </div>
                     </article>
                     

@@ -10,26 +10,28 @@
     <%- include ('./partials/header') %>  
     <main>
         <section>
-        
-            <h1>Todos los productos</h1>
+            
+            <% if (data) { %>
+
+            <h1> <%= data.name %> </h1>
+            
             <div class="cajaSectionArticle">  
-                
-                <% data.map((products) => { %>
-                    
+                               
                     <article class="articuloSection">
-                        <img src="/images/<%= products.image %>">
+                        <img src="/images/<%= data.image %>">
                         <div class="itemsArticulos">
                             <i class="fa-solid fa-truck"></i>
                             <div class="cajaArticuloSection">
-                                <p class="precioProducto">$ <%= products.price %> </p>
-                                <p class="porcentajeDescuento">% <%= products.discount %> </p>
+                                <p class="precioProducto">$ <%= data.price %> </p>
+                                <p class="porcentajeDescuento">% <%= data.discount %> </p>
                             </div>
-                            <h2> <%= products.name %>  </h2>
-                            <a href="/products/<%= products.id %>"> Ver más </a>
+                            <h2> <%= data.name %>  </h2>
                         </div>
                     </article>
-                    
-                <% }) %>
+                    <% } else { %>
+                        <p>Producto no encontrado.</p>
+                    <% } %>
+
                 
             </section>     
 
@@ -38,4 +40,3 @@
 
 </body>
 </html>
-    

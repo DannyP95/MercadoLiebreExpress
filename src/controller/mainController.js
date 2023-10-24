@@ -7,7 +7,7 @@ const mainController ={
          //  res.render(path.resolve(__dirname, '../views/home'))
         //  console.log(datos);
         const { productosTotales } = datos
-         res.render('home', {data: productosTotales})
+        res.render('home', {data: productosTotales})
      },
 
      login: (req, res) =>{
@@ -18,10 +18,6 @@ const mainController ={
         res.render(path.resolve(__dirname, '../views/register'))
      },
 
-     data: (req, res) =>{
-          console.log(datos);
-          res.send('Datos JSON')
-     }
    }
 
 module.exports = mainController

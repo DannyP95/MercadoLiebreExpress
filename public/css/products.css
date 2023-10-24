@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 /* ------------------> RESPONSIVE <------------------ */
 
 /* ----------> TABLET <---------- */
@@ -15,4 +9,19 @@
 /* ----------> LAPTOP <---------- */
 
 @media (min-width: 769px){
+    .detalles-productos{
+        color: blue;
+        font-size: 1rem;
+        display: block;
+    }
+
+    h1{
+        color: red;
+    }
+
+    .cajaSectionArticle{
+        background-color: blue;
+    }
+
+
 }
