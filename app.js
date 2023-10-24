@@ -5,13 +5,16 @@ const app = express();
 const validarRegister = false;
 
 const homeRoute = require('./src/routes/home');
+const productsRoute = require('./src/routes/products');
 
 
 //EJS
 
+app.set('views', path.resolve(__dirname, './src/views'));
+
 app.set('view engine', 'ejs');
 
-app.set('views', __dirname + './src/views');
+app.use(express.urlencoded({ extended: false }));
 
 //JSON
 
@@ -21,32 +24,31 @@ app.use(express.json());
 
 app.use ('/', express.static(__dirname + '/public'))
 
+// RUTAS
+
 app.use('/', homeRoute);
-
-
-
-
+app.use('/products', productsRoute);
 
 // FORMULARIO LOGIN 
 
-app.get("/login", (req,res) => {
-    res.render(path.resolve(__dirname, './src/views/login'));
-})
+// app.get("/login", (req,res) => {
+//     res.render(path.resolve(__dirname, './src/views/login'));
+// })
 
-app.post("/login", (req, res) => {
-    res.redirect("/");
-})
+// app.post("/login", (req, res) => {
+//     res.redirect("/");
+// })
 
 // FORMULARIO REGISTER
 
-app.get("/register", (req,res) => {
-    res.render(path.resolve(__dirname, './src/views/register'));
-})
+// app.get("/register", (req,res) => {
+//     res.render(path.resolve(__dirname, './src/views/register'));
+// })
 
 
-app.post("/register", (req, res) => {
-    res.redirect("/");
-})
+// app.post("/register", (req, res) => {
+//     res.redirect("/");
+// })
 
 
 

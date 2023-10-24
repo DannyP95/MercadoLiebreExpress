@@ -8,22 +8,29 @@
     <main> 
         <!-- Sección: Basado en tu última visita -->
         <section>
-        
-            <h1>Basado en tu última visita</h1>
+            
+            <!-- <h1>Basado en tu última visita</h1> -->
+            <h1>Todos los productos</h1>
+            
+            
             <div class="cajaSectionArticle">    
-                <article class="articuloSection">
-                    <img src="/images/img-cafetera-moulinex.jpg">
-                    <div class="itemsArticulos">
-                        <i class="fa-solid fa-truck"></i>
-                        <div class="cajaArticuloSection">
-                            <p class="precioProducto">$6.770</p>
-                            <p class="porcentajeDescuento">40% OFF</p>
+                    <% data.map((products) => {%>
+                    
+                    <article class="articuloSection">
+                        <img src="/images/<%= products.image %>">
+                        <div class="itemsArticulos">
+                            <i class="fa-solid fa-truck"></i>
+                            <div class="cajaArticuloSection">
+                                <p class="precioProducto"> <%= products.price %> </p>
+                                <p class="porcentajeDescuento"> <%= products.discount %> </p>
+                            </div>
+                            <h2> <%= products.name %>  </h2>
+                            <a href="/products/<%= products.id %>"></a>
                         </div>
-                        <h2>Cafetera Moulinex</h2>
-                    </div>
-                </article>
-                
-                <article class="articuloSection">
+                    </article>
+                    
+                <% }) %>
+                <!-- <article class="articuloSection">
                     <img src="/images/img-macbook-pro-2019.jpg">
                     <div class="itemsArticulos">
                         <i class="fa-solid fa-truck"></i>
@@ -52,21 +59,24 @@
                     <div class="itemsArticulos">
                         <i class="fa-solid fa-truck"></i>
                         <div class="cajaArticuloSection">
-                        <p>$23.200</p>
+                            <p>$23.200</p>
                         <p class="porcentajeDescuento">5% off</p>
                     </div>
                     <h2>SmartTv Samsung 43"</h2>
                 </div>
             </div>
-            </article>
-        </section>     
+        </article> -->
+    
+
+    </section>     
+    
+    <!-- Sección de Ofertas -->
+    
+    <!-- <section>
         
-        <!-- Sección de Ofertas -->
-        <section>
-            
                 <h1>Sección de Ofertas</h1>
                 <div class="cajaSectionArticle">    
-                <article class="articuloSection">
+                    <article class="articuloSection">
                     <img src="/images/img-cafetera-moulinex.jpg">
                         <div class="itemsArticulos">
                             <i class="fa-solid fa-truck"></i>
@@ -114,7 +124,7 @@
                     </div>
                 </article>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <%- include ('./partials/footer') %>  

@@ -468,7 +468,8 @@ footer h4{
     .cajaSectionArticle {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }   
     
     section h1{
@@ -477,7 +478,8 @@ footer h4{
     }
 
     article{
-        margin: 0px 10px;
+        width: 21%;
+        margin: 5px 10px;
     }
     
     article h2{

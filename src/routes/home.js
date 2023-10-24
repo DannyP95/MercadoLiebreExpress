@@ -9,4 +9,7 @@ route.get('/login', mainController.login)
 
 route.get('/register', mainController.register)
 
+route.get('/db', mainController.data)
+
+
 module.exports = route  
