@@ -4,15 +4,16 @@ const fs = require('fs')
 const datos = require('../dataBase/products.json');
 const { log } = require('console');
 const productsFilePath = path.resolve(__dirname, '../dataBase/products.json');
+const { productosTotales } = datos
 // const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController ={
      products: (req, res) =>{
-          const { productosTotales } = datos
+          // const { productosTotales } = datos
           res.render('products', {data: productosTotales})
      },
      detallesProd: (req, res) => {
-          const { productosTotales } = datos
+          // const { productosTotales } = datos
           
           const productId = parseInt(req.params.id, 10);
           const idProd = productosTotales.find(product => product.id === productId);
@@ -27,6 +28,9 @@ const productsController ={
      createProd: (req, res) => {
           const leerData = fs.readFileSync(productsFilePath, 'utf-8');
           const data = JSON.parse(leerData);
+          //Número Random Descuento
+          const randomNumber = Math.floor(Math.random() * 9);
+          const result = randomNumber * 5;
 
           const maxId = Math.max(...data.productosTotales.map(product => product.id));
 
@@ -44,6 +48,7 @@ const productsController ={
                    model: req.body.model,
                    category: req.body.category,
                    price: req.body.price,
+                   discount: result,
                    image: req.body.image
                };
                
@@ -57,7 +62,11 @@ const productsController ={
                
                console.log(newProduct)
 
-               res.render('../views/createProd');
+               // res.redirect('/')
+               res.render('products', { data: data.productosTotales });
+
+               
+
                
           }else{
                console.log('No se encontro name')
