@@ -1,0 +1,29 @@
+@import url(body.css);
+@import url(header.css);
+@import url(footer.css);
+
+.formularioLogin{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.formularioLogin input{
+    margin-top: 5px;
+    height: 40px;
+}
+
+#submit:hover{
+    background-color: #0022AA;
+}
+
+/* ----------> DESKTOP <---------- */
+
+@media (min-width: 769px){
+
+    form button{
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,66 @@
+@import url(body.css);
+@import url(header.css);
+@import url(footer.css);
+
+/* ------------------> FORMULARIO REGISTRO <------------------ */
+
+.formularioRegistro{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.formularioRegistro input{
+    margin-top: 5px;
+    height: 40px;
+}
+
+.pRegistro{
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#categoriasRegistro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#categoriasRegistro label{
+    display: block;
+}
+
+#categoriasRegistro span{
+    display: flex;
+    align-items: center;
+}
+
+.pRegistro button{
+    margin: 10px 0px;
+    background-color: #1259c3;
+    color: #FFF;
+    width: 80%;
+    padding: 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#btnreset:hover{
+    background-color: red;
+}
+
+#submit:hover{
+    background-color: #0022AA;
+}
+
+/* ----------> DESCKTOP <---------- */
+
+@media (min-width: 769px){
+
+    form button{
+        font-size: 25px;
+    }
+}

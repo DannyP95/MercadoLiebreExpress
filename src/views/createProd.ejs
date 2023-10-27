@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include ('./partials/head') %> 
+        <link rel="stylesheet" href="/css/createProd.css">
+
+    </head>
+
+<body>
+    <%- include ('./partials/header') %>  
+    <main>
+        <section>
+            
+            <form action="/products/createProd" method="post">
+
+                <ul>
+
+                    <li>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" class="input">
+                    </li>
+                    
+                    <li>                        
+                        <label for="brand">Marca</label>
+                        <input type="text" name="brand" id="brand" class="input">
+                    </li>
+                
+                    <li>
+                        <label for="model">Modelo</label>
+                        <input type="text" name="model" id="model" class="input">
+                    </li>
+                
+                    <li>
+                        <label for="category">Categoria</label>
+                        <input type="text" name="category" id="category" class="input">
+                    </li>
+                
+                    <li>
+                        <label for="price">Precio</label>
+                        <input type="number" name="price" id="price" class="input">
+                    </li>
+                    
+                    <li>
+                        <label for="image">Imagen</label>
+                        <input type="file" name="image" id="image" class="input">
+                    </li>
+                </ul>
+                    
+                <button type="reset">Borrar</button>
+                <!-- <button type="submit">Envíar</button> -->
+                <input type="submit" value="Enviar">
+            </form>
+
+                
+        </section>     
+
+    </main>
+    
+    <%- include ('./partials/footer') %>  
+
+</body>
+</html>

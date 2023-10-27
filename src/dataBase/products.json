@@ -1,84 +1,93 @@
 {
-    "productosTotales":
-    [
+  "productosTotales": [
     {
-        "id":1,
-        "name": "Cafetera Moulinex",
-        "category": "Electrodoésticos",
-        "price": 6770,
-        "discount": 40,
-        "color": "Rojo",
-        "stock":4,
-        "image": "img-cafetera-moulinex.jpg"
+      "id": 1,
+      "name": "Cafetera Moulinex",
+      "category": "Electrodoésticos",
+      "price": 6770,
+      "discount": 40,
+      "color": "Rojo",
+      "stock": 4,
+      "image": "img-cafetera-moulinex.jpg"
     },
     {
-        "id":2,
-        "name": "MacBook Pro 2019",
-        "category": "Tecnológia",
-        "price": 230000,
-        "discount": 20,
-        "color": "Plateado",
-        "stock": 2,
-        "image": "img-macbook-pro-2019.jpg"
+      "id": 2,
+      "name": "MacBook Pro 2019",
+      "category": "Tecnológia",
+      "price": 230000,
+      "discount": 20,
+      "color": "Plateado",
+      "stock": 2,
+      "image": "img-macbook-pro-2019.jpg"
     },
     {
-        "id":3,
-        "name": "Samsung Galaxy S10",
-        "category": "Celulares",
-        "price": 70500,
-        "discount": 10,
-        "color": "Negro",
-        "stock":4,
-        "image": "img-samsung-galaxy-s10.jpg"
+      "id": 3,
+      "name": "Samsung Galaxy S10",
+      "category": "Celulares",
+      "price": 70500,
+      "discount": 10,
+      "color": "Negro",
+      "stock": 4,
+      "image": "img-samsung-galaxy-s10.jpg"
     },
     {
-        "id":3,
-        "name": "Samsung Galaxy S10",
-        "category": "Celulares",
-        "price": 70500,
-        "discount": 10,
-        "color": "Negro",
-        "stock":4,
-        "image": "img-samsung-galaxy-s10.jpg"
+      "id": 3,
+      "name": "Samsung Galaxy S10",
+      "category": "Celulares",
+      "price": 70500,
+      "discount": 10,
+      "color": "Negro",
+      "stock": 4,
+      "image": "img-samsung-galaxy-s10.jpg"
     },
     {
-        "id":3,
-        "name": "Samsung Galaxy S10",
-        "category": "Celulares",
-        "price": 70500,
-        "discount": 10,
-        "color": "Negro",
-        "stock":4,
-        "image": "img-samsung-galaxy-s10.jpg"
+      "id": 3,
+      "name": "Samsung Galaxy S10",
+      "category": "Celulares",
+      "price": 70500,
+      "discount": 10,
+      "color": "Negro",
+      "stock": 4,
+      "image": "img-samsung-galaxy-s10.jpg"
     },
     {
-        "id":3,
-        "name": "Samsung Galaxy S10",
-        "category": "Celulares",
-        "price": 70500,
-        "discount": 10,
-        "color": "Negro",
-        "stock":4,
-        "image": "img-samsung-galaxy-s10.jpg"
+      "id": 3,
+      "name": "Samsung Galaxy S10",
+      "category": "Celulares",
+      "price": 70500,
+      "discount": 10,
+      "color": "Negro",
+      "stock": 4,
+      "image": "img-samsung-galaxy-s10.jpg"
     },
     {
-        "id":3,
-        "name": "Samsung Galaxy S10",
-        "category": "Celulares",
-        "price": 70500,
-        "discount": 10,
-        "color": "Negro",
-        "stock":4,
-        "image": "img-samsung-galaxy-s10.jpg"
+      "id": 3,
+      "name": "Samsung Galaxy S10",
+      "category": "Celulares",
+      "price": 70500,
+      "discount": 10,
+      "color": "Negro",
+      "stock": 4,
+      "image": "img-samsung-galaxy-s10.jpg"
     },
     {
-        "id":4,
-        "name": "SmartTv Samsung 43",
-        "category": "TV's",
-        "price": 23200,
-        "discount": 5,
-        "color": "Negro",
-        "stock":3,
-        "image": "img-tv-samsung-smart.jpg"
+      "id": 4,
+      "name": "SmartTv Samsung 43",
+      "category": "TV's",
+      "price": 23200,
+      "discount": 5,
+      "color": "Negro",
+      "stock": 3,
+      "image": "img-tv-samsung-smart.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Motorola G13 5G",
+      "brand": "Motorola",
+      "model": "G13 5G",
+      "category": "Celulares",
+      "price": "112000",
+      "image": "motorola g13 5g.jpg"
     }
-]}
+  ]
+}
