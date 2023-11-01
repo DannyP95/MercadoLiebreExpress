@@ -108,6 +108,16 @@
       "price": "95000",
       "discount": 20,
       "image": "img-1698803731351.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Heladera NO FROST Electrolux",
+      "brand": "Electrolux",
+      "model": "HENI3900P",
+      "category": "Heladeras",
+      "price": "418000",
+      "discount": 25,
+      "image": "img-1698804506941.webp"
     }
   ]
 }

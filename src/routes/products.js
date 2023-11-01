@@ -9,7 +9,8 @@ const productsController = require('../controller/productsController.js')
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './public/images');
+        imgLocation = './public/images';
+        cb(null, imgLocation);
     },
     filename: function (req, file, cb) {
         const newFileName = 'img-' + Date.now() + path.extname(file.originalname);
@@ -18,6 +19,8 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({storage})
+// Creamos una constante que utilice a multer y lo guardado dentro de está y poder utilizar sus datos 
+// storage es un objeto literal 
 
 route.get('/', productsController.products);
 route.get('/create', productsController.createViews);
