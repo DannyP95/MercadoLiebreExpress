@@ -20,7 +20,8 @@
                     <% data.map((products) => {%>
                     
                     <article class="articuloSection">
-                        <img src="/images/<%= products.image %>">
+                        <!-- Validación de imagen -->
+                        <img src="/images/<%= products.image ? products.image : 'not-img.png' %>">
                         <div class="itemsArticulos">
                             <i class="fa-solid fa-truck"></i>
                             <div class="cajaArticuloSection">

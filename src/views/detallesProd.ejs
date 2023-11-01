@@ -18,7 +18,8 @@
             <div class="cajaSectionArticle">  
                                
                     <article class="articuloSection">
-                        <img src="/images/<%= data.image %>">
+                        <!-- Validación de imagen -->
+                        <img src="/images/<%= data.image ? data.image : 'not-img.png' %>">
                         <div class="itemsArticulos">
                             <i class="fa-solid fa-truck"></i>
                             <div class="cajaArticuloSection">
