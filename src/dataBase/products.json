@@ -86,46 +86,28 @@
       "brand": "Motorola",
       "model": "G13 5G",
       "category": "Celulares",
-      "price": "120000",
-      "image": "motorola g13 5g.jpg"
+      "price": "112000",
+      "discount": 5
     },
     {
       "id": 6,
+      "name": "Motorola G23 5G",
+      "brand": "Motorola",
+      "model": "G23 4G",
+      "category": "Celulares",
+      "price": "130000",
+      "discount": 25,
+      "image": "img-1698803673151.png"
+    },
+    {
+      "id": 7,
       "name": "Motorola G13 5G",
       "brand": "Motorola",
       "model": "G13 5G",
       "category": "Celulares",
-      "price": "154000",
-      "image": "motorola g13 5g.jpg"
-    },
-    {
-      "id": 7,
-      "name": "Motorola G23 4G",
-      "brand": "Motorola",
-      "model": "G23 4G",
-      "category": "Celulares",
-      "price": "98450",
-      "image": "motorola g23 4g.png"
-    },
-    {
-      "id": 8,
-      "name": "Motorola G23 4G",
-      "brand": "Motorola",
-      "model": "G23 4G",
-      "category": "Celulares",
-      "price": "98450",
-      "discount": 0,
-      "image": "motorola g23 4g.png"
-    },
-    {
-      "id": 9,
-      "name": "Motorola G23 4G",
-      "brand": "Motorola",
-      "model": "G23 4G",
-      "category": "Celulares",
-      "price": "98450",
-      "discount": 15,
-      "image": "motorola g23 4g.png"
+      "price": "95000",
+      "discount": 20,
+      "image": "img-1698803731351.jpg"
     }
   ]
 }

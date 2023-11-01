@@ -57,6 +57,7 @@ article:hover{
 
 .cajaArticuloSection{
     display: flex;
+    justify-content: space-between;
 }
 
 .itemsArticulos:hover > h2{

@@ -1,11 +1,16 @@
 const path = require('path');
 const fs = require('fs')
+const multer = require('multer');
 
 const datos = require('../dataBase/products.json');
 const { log } = require('console');
 const productsFilePath = path.resolve(__dirname, '../dataBase/products.json');
 const { productosTotales } = datos
 // const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
+
+// CONTROLADOR 
 
 const productsController ={
      products: (req, res) =>{
@@ -14,11 +19,11 @@ const productsController ={
      },
      detallesProd: (req, res) => {
           // const { productosTotales } = datos
-          
           const productId = parseInt(req.params.id, 10);
           const idProd = productosTotales.find(product => product.id === productId);
 
-          res.render('detallesProd', {data: idProd });          
+          res.render('detallesProd', {data: idProd });  
+          
      },
 
      createViews: (req, res) => {
@@ -31,16 +36,18 @@ const productsController ={
           //Número Random Descuento
           const randomNumber = Math.floor(Math.random() * 9);
           const result = randomNumber * 5;
+          //result = N° Random de descuento 
 
+          //Traer el ultimo id
           const maxId = Math.max(...data.productosTotales.map(product => product.id));
+          // 
 
-          console.log(maxId)
-
-          console.log(req.body.name)
-
-
+          // Modificamos los campos de un nuevo producto
           if (req.body && req.body.name) {
                // El objeto req.body y la propiedad 'name' están definidos, entonces puedes acceder a req.body.name
+               const newFileName = req.file.filename
+               // en la const newFileName guardamos el nombre de la imagen creada
+               //en esta constante le guardamos los nuevos campos al nuevo producto
                const newProduct = {
                    id: maxId + 1,
                    name: req.body.name,
@@ -49,29 +56,28 @@ const productsController ={
                    category: req.body.category,
                    price: req.body.price,
                    discount: result,
-                   image: req.body.image
+                   image: req.body.image,
+               //  Esta "image" lo utilizamos para las imagenes del proyecto ML 
+                   image: newFileName
+               //  Este último "image" lo utilizamos para las imagenes subidas desde el sevidor
                };
                
                
-               
+               //Insertamos el nuevo producto a la base de datos
                data.productosTotales.push(newProduct);
                
                fs.writeFileSync(productsFilePath, JSON.stringify(data, null, 2), 'utf-8');
-
-               console.log(newProduct)
-               
-               console.log(newProduct)
 
                // res.redirect('/')
                res.render('products', { data: data.productosTotales });
 
                
-
-               
           }else{
                console.log('No se encontro name')
           }
-          }
+            
+     }
+     
      }
      
 module.exports = productsController;
