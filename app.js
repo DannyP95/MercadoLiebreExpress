@@ -3,9 +3,14 @@ const path = require("path");
 const express = require("express");
 const app = express();
 const validarRegister = false;
+const session = require('express-session');
 
+// REQUERIR RUTAS
 const homeRoute = require('./src/routes/home');
 const productsRoute = require('./src/routes/products');
+
+// REQUERIR MIDDLEWARES
+const logMiddleware = require('./src/middlewares/logMiddleware')
 
 
 //EJS
@@ -16,9 +21,15 @@ app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: false }));
 
+app.use(session({secret: "Shhh.... Tú no ha vista nada :3"}))
+// MIDDLEWARES
+
+app.use(logMiddleware);
+
 //JSON
 
 app.use(express.json());
+
 
 // ==========> creamos la ruta a los archivos estaticos 
 
