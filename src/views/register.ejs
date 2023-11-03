@@ -8,71 +8,26 @@
     <%- include ('./partials/header') %>  
 
 <main>
-    <form id="formularioRegistro" class="formularioRegistro" action="/register" method="POST">
+    <form id="formularioRegistro" class="formularioRegistro" action="/user/register" method="POST" enctype="multipart/form-data">
+        
         <p class="pRegistro">
-            <label name="name" value="name">Nombre:</label>
-            <input type="text" id="name" name="name" placeholder="Nombre" pattern="^[a-zA-ZÀ-ÿ\s]{1,40}" required>
-            <span id="spanInput">Solo letras</span>
+            <label for="userName">Nombre de usuario:</label>
+            <input type="text" id="userName" name="userName" placeholder="Nombre">
+        </p>
+
+        <p class="pRegistro">
+            <label for="userPassword">Ingrese una contraseña:</label>
+            <input type="password" id="userPassword" name="userPassword" placeholder="Contraseña">
         </p>
         
         <p class="pRegistro">
-            <label name="lastname" value="lastname">Apellido:</label>
-            <input type="text" id="lastname" name="lastname" placeholder="Apellido" pattern="^[a-zA-ZÀ-ÿ\s]{1,40}" required >
-        </p>
-        
-        <p class="pRegistro">
-            <label name="username" value="username">Nombre de usuario:</label>
-            <input type="text" id="username" name="username" placeholder="Nombre de usuario" pattern="^[a-zA-Z0-9\_\-]{4,16}$" required>
-        </p>
-        
-        <p class="pRegistro">
-            <label name="birthday" value="birthday">Fecha de Nacimiento:</label>
-            <input type="date" id="birthday" name="birthday" value="2023-07-18" required>
-        </p>
-        
-        <p class="pRegistro">
-            <label name="residence" value="residence">Domicilio:</label>
-            <input type="text" id="residence" name="residence" placeholder="Domicilio" pattern="^[a-zA-Z0-9\_\-]{4,16}$" required>
-        </p>
-        
-        <p class="pRegistro">
-            <label name="userPerfil" value="userPerfil">Perfil de usuario:</label>
-            <select id="userPerfil" name="userPerfil" required>
-                <option name="userPerfil" value="comprador" >Comprador</option>
-                <option name="userPerfil" value="vendedor">Vendedor</option>
-            </select>
-        </p>
-        
-        <p id="categoriasRegistro" class="pRegistro">
-            <label for="category" >Categorias:
-                <span>
-                    <input type="checkbox" name="category" value="Electro">Electro
-                    <input type="checkbox" name="category" value="Moda">Moda
-                    <input type="checkbox" name="category" value="Hogar">Hogar
-                    <input type="checkbox" name="category" value="Juguetería">Juguetería
-                    <input type="checkbox" name="category" value="Vida sana">Vida sana
-                </span>
-            </label>
-        </p>
-        
-        <p class="pRegistro">
-            <label>Selecciona un foto:</label>
-            <input type="file" name="photoperfil" accept=".jpg" multiple>
-        </p>
-        
-        <p class="pRegistro">
-            <label name="password">Ingrese una contraseña:</label>
-            <input type="password" id="password" name="password" pattern="^.{4,12}$" required>
-        </p>
-        
-        <p class="pRegistro">
-            <label name="confirmpassword">Confirme su contraseña:</label>
-            <input type="password" id="confirmpassword" name="confirmpassword" pattern="^.{4,12}$" required>
+            <label for="userMail">Confirme su contraseña:</label>
+            <input type="email" id="userMail" name="userMail" placeholder="Mail">
         </p>
 
         <p class="pRegistro">
             <button type="reset" name="btnreset" id="btnreset">Borrar</button>
-            <button type="submit" name="btnsubmit" id="submit" >Envíar</button>
+            <button type="submit" name="btnsubmit" id="submit" >Registrarme</button>
         </p>
     </form>
 </main>

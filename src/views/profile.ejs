@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include ('./partials/head') %> 
+        <link rel="stylesheet" href="/css/profile.css">
+
+    </head>
+
+<body>
+    <%- include ('./partials/header') %>  
+    <main>
+        <section>
+            
+            <% if (data) { %>
+
+            <h1> Perfil </h1>
+            
+            <div class="cajaSectionArticle">  
+                               
+                    <article class="articuloSection">
+                        <!-- Validación de imagen -->
+                        <img src="/images/users<%= data.image ? data.image : 'not-img.png' %>">
+                        <div class="itemsArticulos">
+                            <h2>Usuario: <%= data.userName %>  </h2>
+                            <div class="cajaArticuloSection">
+                                <p class="userMail">Mail: <%= data.userMail %> </p>
+                                <!-- <p class="porcentajeDescuento">% <%= data.discount %> </p> -->
+                            </div>
+                        </div>
+                    </article>
+                    <% } %>
+
+                
+            </section>     
+
+    </main>
+    <%- include ('./partials/footer') %>  
+
+</body>
+</html>

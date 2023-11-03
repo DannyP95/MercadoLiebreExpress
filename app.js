@@ -8,6 +8,7 @@ const session = require('express-session');
 // REQUERIR RUTAS
 const homeRoute = require('./src/routes/home');
 const productsRoute = require('./src/routes/products');
+const usersRoute = require('./src/routes/users');
 
 // REQUERIR MIDDLEWARES
 const logMiddleware = require('./src/middlewares/logMiddleware')
@@ -22,6 +23,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 
 app.use(session({secret: "Shhh.... Tú no ha vista nada :3"}))
+
 // MIDDLEWARES
 
 app.use(logMiddleware);
@@ -39,6 +41,7 @@ app.use ('/', express.static(__dirname + '/public'))
 
 app.use('/', homeRoute);
 app.use('/products', productsRoute);
+app.use('/users', usersRoute);
 
 // FORMULARIO LOGIN 
 
