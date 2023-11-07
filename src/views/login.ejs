@@ -9,26 +9,41 @@
     <%- include ('./partials/header') %>  
 
     <main>
-        <form class="formularioLogin" action="/login" method="POST" >
-            <p class="pRegistro">
-                <label name="username" value="username">Nombre de usuario: </label>
-                <input type="text" id="username" name="username" placeholder="Nombre de usuario" pattern="^[a-zA-Z0-9\_\-]{4,16}$" required>
-            </p>
-            <p class="pRegistro">
-                <label name="password">Ingrese su contraseña: </label>
-                <input type="password" id="password" name="password" pattern="^.{4,12}$" required>
-            </p>
-            
-            <p class="pRegistro">
+        <section>
 
-                <button type="submit" name="btnsubmit" id="submit">Envíar</button>
-            </p>
-            
-            
-        </form>
-    </main>
+            <% if (locals.errorsValidation) { %>
+                <% errorsValidation.forEach(errorsValidation => { %>
+                    <p> <%= errorsValidation.msg %> </p>
+                <% }) %>
+            <% } %>
 
-    <%- include ('./partials/footer') %>  
+            <form class="formularioLogin" action="/users/profile" method="POST" enctype="multipart/form-data" >
+                
+                <p class="pRegistro">
+                    <label for="userMail">Ingrese su correo:</label>
+                    <input type="email" id="userMail" name="userMail" placeholder="Mail" value="<%= locals.oldData && oldData.userMail ? oldData.userMail : '' %>">
+                </p>
+                
+                <p class="pRegistro">
+                    <label for="userPassword">Ingrese una contraseña:</label>
+                    <input type="password" id="userPassword" name="userPassword" placeholder="Contraseña">
+                </p>
 
+                <p class="pRegistro">
+                    <input type="checkbox" id="checkboxLogin" name="checkboxLogin">
+                    <label for="checkboxLogin">¿Desea recordar el usuario?</label>
+                </p>
+                
+                <p class="pRegistro">
+                    <button type="submit" name="btnsubmit" id="submit">Envíar</button>
+                </p>
+                
+                
+            </form>
+        </section>
+        </main>
+        
+        <%- include ('./partials/footer') %>  
+        
     </body>
     </html>

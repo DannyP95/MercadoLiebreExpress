@@ -1,11 +1,18 @@
 {
-    "usuariosTotales": [
-      {
-        "id":1,
-        "userName": "Dannu95",
-        "password": "1234",
-        "userMail": "danny95@gmail.com",
-        "userImage": ""
-      }
-]
+  "usuariosTotales": [
+    {
+      "id": 1,
+      "userName": "Danny95",
+      "userMail": "danny95@gmail.com",
+      "userpassword": "1234",
+      "imgUser": ""
+    },
+    {
+      "id": 2,
+      "userName": "Daniel",
+      "userMail": "daniel@mail.com",
+      "userPassword": "123456789",
+      "imgUser": ""
+    }
+  ]
 }

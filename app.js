@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const validarRegister = false;
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
 // REQUERIR RUTAS
 const homeRoute = require('./src/routes/home');
@@ -12,6 +13,7 @@ const usersRoute = require('./src/routes/users');
 
 // REQUERIR MIDDLEWARES
 const logMiddleware = require('./src/middlewares/logMiddleware')
+const cookieLoginMiddleware = require('./src/middlewares/cookieLoginMiddleware')
 
 
 //EJS
@@ -22,11 +24,14 @@ app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: false }));
 
-app.use(session({secret: "Shhh.... Tú no ha vista nada :3"}))
+app.use(session({ secret: "Shhh.... Tú no ha vista nada :3" }));
+
+app.use(cookieParser());
 
 // MIDDLEWARES
 
 app.use(logMiddleware);
+app.use(cookieLoginMiddleware);
 
 //JSON
 

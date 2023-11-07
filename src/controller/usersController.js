@@ -1,11 +1,15 @@
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
+
 const datos = require('../dataBase/users.json')
-const usersFilePath = path.resolve(__dirname, '../dataBase/users.json');
 const { usuariosTotales } = datos
+const usersFilePath = path.resolve(__dirname, '../dataBase/users.json');
 const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-const { validationResult } = require('express-validator')
+const { validationResult } = require('express-validator');
+const session = require('express-session');
+const { log } = require('console');
+const { json } = require('express');
 
 
 const usersController ={
@@ -15,7 +19,60 @@ const usersController ={
      },
 
      login: (req, res) => {
-        res.render(path.resolve(__dirname, '../views/login'))
+          if(req.session.usersLogued){
+              res.render('profile', {data: usuariosTotales})
+          }else{
+          res.render('login')
+          }
+     },
+
+     processLogin: (req, res) => {
+          
+          let errorsValidation = validationResult(req); 
+          const usersLogin = fs.readFileSync(usersFilePath, 'utf-8');
+          const usersLoginJSON = JSON.parse(usersLogin);
+          const usuariosLogueados = usersLoginJSON.usuariosTotales
+
+let usersLogged;
+// const JSON = usersJSON;
+
+if (errorsValidation.isEmpty()) {
+    for (let i = 0; i < usuariosLogueados.length; i++) {
+        
+
+        if (usuariosLogueados[i].userMail == req.body.userMail) {
+            console.log(usuariosLogueados[i].userMail);
+
+            if (usuariosLogueados[i].userPassword == req.body.userPassword) {
+                usersLogged = usuariosLogueados[i];
+                break;
+            }
+        }
+    }
+
+               console.log('usuario: ' + usersLogged);
+
+               if(usersLogged == undefined){
+
+                    res.render('login', {errorsValidation: errorsValidation.array(), oldData: req.body})
+               }else{
+
+               req.session.usersLogged = usersLogged;
+               
+               // GUARDAR SESSION 
+               if (req.body.checkboxLogin != undefined){
+                    res.cookie('checkboxLogin', usersLogged.userMail, { maxAge: 60000 * 60 * 24});
+               }
+
+               // res.render('profile', {data: usuariosTotales})
+               res.send('ok')
+               }
+
+
+          }else{
+               //Si hay errores, viene aca.
+               res.render('login', {errorsValidation : errorsValidation.array(), oldData: req.body});
+          }
      },
 
      registerViews: (req, res) =>{
@@ -46,11 +103,11 @@ const usersController ={
                   
                   const newUsers = {
                         id: maxId + 1,
-                        userName: req.body.name,
-                        password: req.body.password,
+                        userName: req.body.userName,
                         userMail: req.body.userMail,
+                        userPassword: req.body.userPassword,
                         //  Esta "image" lo utilizamos para las imagenes del proyecto ML 
-                        image:newFileName
+                        imgUser:newFileName
                         //  Este último "image" lo utilizamos para las imagenes subidas desde el sevidor
                     };
              
