@@ -464,3 +464,17 @@ Se ingresó en la página: /
 Se ingresó en la página: /users/login
 Se ingresó en la página: /users/profile
 Se ingresó en la página: /checked
+Se ingresó en la página: /
+Se ingresó en la página: /users/register
+Se ingresó en la página: /users/register
+Se ingresó en la página: /users/login
+Se ingresó en la página: /users/login
+Se ingresó en la página: /users/profile
+Se ingresó en la página: /users/profile
+Se ingresó en la página: /users/profile
+Se ingresó en la página: /users/login
+Se ingresó en la página: /users/profile
+Se ingresó en la página: /users/profile
+Se ingresó en la página: /users/profile
+Se ingresó en la página: /users/login
+Se ingresó en la página: /users/profile

@@ -1,5 +1,7 @@
 const path = require('path');
 const fs = require('fs');
+const bcryptjs = require('bcryptjs')
+
 
 const datos = require('../dataBase/users.json')
 const { usuariosTotales } = datos
@@ -41,12 +43,14 @@ if (errorsValidation.isEmpty()) {
         
 
         if (usuariosLogueados[i].userMail == req.body.userMail) {
-            console.log(usuariosLogueados[i].userMail);
-
-            if (usuariosLogueados[i].userPassword == req.body.userPassword) {
+          console.log('Usuario encontrado: '+ usuariosLogueados[i].userName);
+          console.log('Con el Mail: '+ usuariosLogueados[i].userMail);
+            if (bcryptjs.compareSync(req.body.userPassword, usuariosLogueados[i].userPassword)) {
                 usersLogged = usuariosLogueados[i];
                 break;
+               }else{
             }
+          console.log('Contraseña Incorrecta');
         }
     }
 
@@ -105,7 +109,7 @@ if (errorsValidation.isEmpty()) {
                         id: maxId + 1,
                         userName: req.body.userName,
                         userMail: req.body.userMail,
-                        userPassword: req.body.userPassword,
+                        userPassword: bcryptjs.hashSync(req.body.userPassword, 10),
                         //  Esta "image" lo utilizamos para las imagenes del proyecto ML 
                         imgUser:newFileName
                         //  Este último "image" lo utilizamos para las imagenes subidas desde el sevidor

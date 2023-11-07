@@ -13,6 +13,13 @@
       "userMail": "daniel@mail.com",
       "userPassword": "123456789",
       "imgUser": ""
+    },
+    {
+      "id": 3,
+      "userName": "Daniel",
+      "userMail": "dani2023@mail.com",
+      "userPassword": "$2a$10$/AcEVl8pXBNpz2PPgtvL1uOaYaNz3xSlLvpJUhkYxX29bfD6fwQfy",
+      "imgUser": ""
     }
   ]
 }
